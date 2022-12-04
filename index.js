@@ -3,15 +3,23 @@
 //Rpd_BHvjT673Tk5oU
 
 function contact(event) {
-  event.preventDefault();
-  emailjs
+event.preventDefault();
+const loading = document.querySelector('.modal__overlay--loading')
+const success = document.querySelector('.modal__overlay--success')
+loading.classList += " modal__overlay--visible"
+emailjs
     .sendForm(
       "service_29vbg9d",
       "template_zrm3u3q",
       event.target,
-      "pd_BHvjT673Tk5oU"
-    )
-    .then(() => {
-      console.log("this worked");
-    });
+      "Rpd_BHvjT673Tk5oU"
+    ).then(() => {
+        loading.classList.remove("modal__overlay--visible");
+        success.classList += " modal__overlay--visible"
+    }).catch(() => {
+        loading.classList.remove("modal__overlay--visible");
+        alert(
+            "The email service is temporarily unavailable. Please contact me directly at ryancacicedo@gmail.com"
+        );
+    })
 }
