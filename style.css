@@ -680,6 +680,9 @@ Small phones, tablets, large smart phones
     .modal__half {
         width: 100%;
     }
+    .shape {
+        display: none;
+    }
 }
 
 /*
@@ -688,10 +691,10 @@ small phones
 
 @media (max-width: 480px) {
     .title {
-        font-size: 52px;
+        font-size: 45px;
     }
     .header__para {
-        font-size: 18px;
+        font-size: 15px;
     }
     .nav__link:first-child {
         display: none;
