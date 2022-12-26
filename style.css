@@ -67,7 +67,8 @@ input:hover, textarea:hover {
 }
 
 input:focus, textarea:focus {
-    border-color: #3EB489;
+    border-color: #1f4caa;
+    ;
 }
 
 
@@ -102,8 +103,38 @@ input:focus, textarea:focus {
     line-height: 1;
 }
 
-.mint {
-    color: #3EB489 !important;
+@keyframes background-pan {
+    from {
+      background-position: 0% center;
+    }
+  
+    to {
+      background-position: -200% center;
+    }
+  }
+
+.gradient {
+    animation: background-pan 3s linear infinite;
+    background-size: 200%;
+    background-image: linear-gradient(
+      to right,
+      #1cab9a,
+      #0099a9,
+      #0085b6,
+      #006db8,
+      #0050aa,
+      #134eaa,
+      #1f4caa,
+      #284aaa,
+      #2866c1,
+      #3183d6,
+      #459fea,
+      #5fbbfb,
+      #1cab9a
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 }
 
 .link__hover-effect {
@@ -181,6 +212,7 @@ nav,
     color: #242424;
 }
 
+
 /*
  LANDING PAGE
 */
@@ -211,7 +243,6 @@ nav,
 }
 
 .social__link {
-    background-color: #3EB489;
     color: white;
     padding: 6px;
     width: 32px;
@@ -413,13 +444,31 @@ MODAL
 }
 
 .form__submit {
-    background-color: #3EB489;
-    border: 2px solid #3EB489;
-    color: white;
+    animation: background-pan 2.75s linear infinite;
+    background-size: 200%;
+    background-image: linear-gradient(
+        to right,
+        #1cab9a,
+        #0099a9,
+        #0085b6,
+        #006db8,
+        #0050aa,
+        #134eaa,
+        #1f4caa,
+        #284aaa,
+        #2866c1,
+        #3183d6,
+        #459fea,
+        #5fbbfb,
+        #1cab9a
+    );
+    border: 2px solid #1f4caa;
+    color: #fff;
     font-weight: 700;
     width: 100%;
     max-width: 240px;
     padding: 12px 24px;
+    border-radius: 4px;
     font-size: 20px;
     transition: all 300ms ease;
 }
@@ -430,8 +479,9 @@ MODAL
 }
 
 .form__submit:active {
-    border-color: #3EB489;
-    color: #3EB489;
+    border-color: #1f4caa;
+    color: #1f4caa;
+    ;
 }
 
 .modal__overlay {
@@ -452,7 +502,7 @@ MODAL
 }
 
 .modal__overlay--success {
-    background-color: #3EB489;
+    background-color: #1f4caa;
     font-size: 50px;
     font-weight: 700;
     text-align: center;
